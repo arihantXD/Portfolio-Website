@@ -1,0 +1,107 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --fontprimary : 1rem;
+    --fontlogo : clamp(1.3rem, 6vw, 3rem);
+    --fontbig : 1.7rem;
+}
+body{
+    position: relative;
+    width: min(100%, 1750px);
+    height: 100%;
+    margin-inline: auto;
+    color: #333;
+}
+.navbar{
+    position: relative;
+    display: flex;
+    background: #ddd;
+    justify-content: space-between;
+    height: 50px;
+    align-items: center;
+    padding:5px 15px;
+}
+ion-icon{
+    font-size: var(--fontbig);
+}
+.nav-right{
+    display: none;
+}
+.logo-section{
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/bgimg1.jpg');
+    height: calc(100vh - 50px);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0px 15px;
+    color: white;
+}
+.logo-section-left{
+    position: relative;
+    margin-top: 100px;
+    background-color: white;
+    height: 50px;
+    width: 47px;
+    overflow: hidden;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+    color : #333;
+    padding-inline: 10px;
+    gap: 5px;
+    border-radius: 15px;
+    transition: width 0.3s ease-out;
+}
+.logo-section-cart ion-icon{
+    padding-top: 3px;
+}
+.logo-section-right ion-icon{
+    padding-top: 4px;
+}
+.logo-section-item{
+    display: flex;
+    border-left: 2px solid #ddd;
+}
+.logo-section-item ion-icon{
+    padding-left: 15px;
+}
+.logo-section-right{
+    margin-top: 300px;
+}
+.logo-section-right .logo{
+    position: relative;
+    font-size: var(--fontlogo);
+    font-weight: 700;
+}
+.logo-section-right p{
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 70px;
+}
+.logo-section-right a{
+    position: relative;
+    text-decoration: none;
+    background-color: black;
+    padding: 15px 20px;
+    color: white;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.slider ion-icon{
+    position: relative;
+    color: white;
+    font-size: var(--fontbig);
+    margin-top: 100px;
+}
+.active{
+    width: 230px ;
+    transition: width 0.3s ease-out;
+}
