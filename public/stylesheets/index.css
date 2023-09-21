@@ -5,36 +5,35 @@
     box-sizing: border-box;
 }
 :root{
-    --fontprimary : 1rem;
-    --fontlogo : clamp(1.3rem, 6vw, 3rem);
-    --fontbig : 1.7rem;
+    --fontprimary : 14px;
+    --fontlogo : clamp(1.6rem, 6vw, 2.3rem);
+    --fontbig : clamp(1.3rem, 4vw, 1.8rem);
 }
 body{
     position: relative;
-    width: min(100%, 1750px);
+    width: min(100%, 1950px);
     height: 100%;
     margin-inline: auto;
     color: #333;
+    font-size: var(--fontprimary);
 }
 .navbar{
     position: relative;
     display: flex;
-    background: #ddd;
+    background: white;
     justify-content: space-between;
     height: 50px;
     align-items: center;
-    padding:5px 15px;
+    padding:0px 25px;
+    padding-top: 5px;
 }
 ion-icon{
     font-size: var(--fontbig);
 }
-.nav-right{
-    display: none;
-}
 .logo-section{
     position: relative;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/img/bgimg1.jpg');
-    height: calc(100vh - 50px);
+    min-height: 560px;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -45,10 +44,11 @@ ion-icon{
     color: white;
 }
 .logo-section-left{
+    z-index: 111;
     position: relative;
-    margin-top: 100px;
+    margin-top: 70px;
     background-color: white;
-    height: 50px;
+    min-height: 50px;
     width: 47px;
     overflow: hidden;
     margin-inline: auto;
@@ -71,10 +71,11 @@ ion-icon{
     border-left: 2px solid #ddd;
 }
 .logo-section-item ion-icon{
-    padding-left: 15px;
+    padding-left: 20px;
 }
 .logo-section-right{
-    margin-top: 300px;
+    position: relative;
+    margin-top: 150px;
 }
 .logo-section-right .logo{
     position: relative;
@@ -94,14 +95,109 @@ ion-icon{
     color: white;
     font-weight: 700;
     border-radius: 5px;
+    box-shadow: 7px 6px 7px black;
+}
+.slider{
+    min-height: 70px;
+    margin-bottom: 10px;
+    margin-top: 70px;
 }
 .slider ion-icon{
     position: relative;
     color: white;
     font-size: var(--fontbig);
-    margin-top: 100px;
 }
 .active{
-    width: 230px ;
+    width: 215px ;
     transition: width 0.3s ease-out;
+}
+.nav-right{
+    display: none;
+}
+@media screen and (min-width : 900px){
+    .nav-right{
+        display: flex;
+        gap: 30px;
+    }
+    .nav-mid{
+        display: none;
+    }
+}
+.about{
+    margin-top: 20px;
+    text-align: center;
+    width: min(100%, 1250px);
+    margin-inline: auto;
+}
+.about-header{
+    font-size: var(--fontlogo);
+    font-weight: 600;
+}
+.about-child{
+    margin-top: 10px;
+    text-align: start;
+    padding: 10px 15px;
+}
+.about-child >span{
+    font-size: var(--fontbig);
+    font-weight: 500;
+}
+.intro-div p{
+    padding-bottom:15px ;
+}
+.intro-div a{
+    position: relative;
+    text-decoration: none;
+    background-color: white;
+    padding: 8px 15px;
+    color: black;
+    font-weight: 700;
+    border-radius: 5px;
+    border: 2px solid black;
+}
+.education-div{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.education-div>div{
+    margin-top: 10px;
+}
+.education-detail-child > span{
+    font-weight: 600;
+}
+.education-detail-child{
+    border-left: 10px solid #333;
+    padding: 5px 15px;
+}
+.skill-div{
+    margin-top: 10px;
+}
+.skill-child > span{
+    font-size: var(--fontbig);
+    border-left: 10px solid #333;
+    padding-block: 5px;
+    padding-left: 15px;;
+}
+.skill-child ul{
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 15px 30px;
+    flex-wrap: wrap;
+}
+.skill-child ul li{
+    background-color: #ddd;
+    padding: 7px 13px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+
+
+
+
+.intro-div, .education-div, .skill-child{
+    padding-inline: 10px;
 }

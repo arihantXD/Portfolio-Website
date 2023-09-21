@@ -9,7 +9,6 @@ const tl = gsap.timeline();
 tl
 .from(".navbar" ,{
     delay : 0.5,
-    top: 20,
     opacity : 0,
     duration : 0.5
 })
@@ -18,17 +17,7 @@ tl
     opacity : 0,
     duration : 0.5
 })
-.from(".logo-section-right .logo" ,{
-    top: 30,
-    opacity : 0,
-    duration : 0.5
-})
-.from(".logo-section-right p" ,{
-    top: 30,
-    opacity : 0,
-    duration : 0.5
-})
-.from(".logo-section-right a" ,{
+.from(".logo-section-right" ,{
     top: 30,
     opacity : 0,
     duration : 0.5
@@ -40,11 +29,32 @@ tl
 })
 .from(".slider ion-icon" ,{
     opacity : 0,
-    duration : 0.3
+    duration : 0.5
+})
+.from(".about-header" ,{
+    y: 30,
+    opacity: 0,
+    duration : 0.5
+})
+.from(".about-child" ,{
+    y: 30,
+    opacity: 0,
+    duration : 0.5
 })
 .to(".slider ion-icon" ,{
     y: 30,
     yoyo : "true",
     repeat : -1,
-    duration : 1
+    duration : 0.8
 })
+// .from(".about > .about-child" ,{
+//     scrollTrigger : {
+//         trigger : ".intro-div",
+//         scroller : "body",
+//         markers : true,
+//         start : "top 70%",
+//     },
+//     x: -30,
+//     opacity: 0,
+//     duration : 1
+// })
