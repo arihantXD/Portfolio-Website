@@ -6,8 +6,8 @@
 }
 :root{
     --fontprimary : 14px;
-    --fontlogo : clamp(1.6rem, 6vw, 2.3rem);
-    --fontbig : clamp(1.3rem, 4vw, 1.8rem);
+    --fontlogo : clamp(1.7rem, 6vw, 2.4rem);
+    --fontbig : clamp(1.2rem, 4vw, 1.7rem);
 }
 body{
     position: relative;
@@ -49,7 +49,7 @@ ion-icon{
     margin-top: 70px;
     background-color: white;
     min-height: 50px;
-    width: 47px;
+    width: 42px;
     overflow: hidden;
     margin-inline: auto;
     display: flex;
@@ -95,7 +95,6 @@ ion-icon{
     color: white;
     font-weight: 700;
     border-radius: 5px;
-    box-shadow: 7px 6px 7px black;
 }
 .slider{
     min-height: 70px;
@@ -123,15 +122,15 @@ ion-icon{
         display: none;
     }
 }
-.about{
+.about, .project{
     margin-top: 20px;
     text-align: center;
     width: min(100%, 1250px);
     margin-inline: auto;
 }
-.about-header{
+.about-header, .project-header{
     font-size: var(--fontlogo);
-    font-weight: 600;
+    font-weight: 500;
 }
 .about-child{
     margin-top: 10px;
@@ -145,11 +144,12 @@ ion-icon{
 .intro-div p{
     padding-bottom:15px ;
 }
-.intro-div a{
+.intro-div a, .project-div a{
     position: relative;
     text-decoration: none;
     background-color: white;
-    padding: 8px 15px;
+    padding: 8px 12px;
+    margin-right: 10px;
     color: black;
     font-weight: 700;
     border-radius: 5px;
@@ -193,9 +193,80 @@ ion-icon{
     font-weight: 600;
 }
 
+.project-img{
+    position: relative;
+    width: clamp( 310px, 95%, 700px);
+    height: clamp(310px, 95% ,600px);
+    /* border-left: 10px solid #333;
+    padding-block: 5px;
+    padding-left: 15px; */
+    
+}
+.project-img img{
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.project-img .project-big-img{
+    box-shadow: 2px 3px 12px #666666;
+    transition: 0.3s ease-in;
+}
+.project-img .project-big-img:hover{
+    box-shadow: 2px 3px 12px 2px #575656;
+    transition: 0.3s ease-in;
+}
+.project-img .project-small-img{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 17%;
+    object-fit: cover;
+    height: 50%;
+    box-shadow: 1px 2px 3px #333;
+}
+.project-child{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 35px;
+    padding-inline: 10px;
+}
+.project-description{
+    padding: 20px;
+    max-width: 690px;
+}
+.project-description span{
+    font-size: var(--fontbig);
+    font-weight: 500;
+    text-align: center;
+}
+.project-description p{
+    padding: 10px 0px;
+    text-align: start;
+}
+.project-links{
+    margin-top: 15px;
+    text-align: start;
+}
+.project{
+    margin-top: 70px;
+}
+@media screen and (min-width : 900px){
+    .project-child{
+        flex-direction: row;
+        align-items: normal;
+        text-align: start;
+        gap: 30px;
+        margin-bottom: 50px;
+    }
+    .project-img .project-big-img{
+        min-width: 450px;
+        min-height: 300px;
+    }
+}
 
 
-
-.intro-div, .education-div, .skill-child{
+.intro-div, .education-div, .skill-child, .project-div{
     padding-inline: 10px;
 }
