@@ -28,7 +28,7 @@ body{
     padding-top: 5px;
 }
 ion-icon{
-    font-size: var(--fontbig);
+    font-size: 1.7rem;
 }
 .logo-section{
     position: relative;
@@ -49,7 +49,7 @@ ion-icon{
     margin-top: 70px;
     background-color: white;
     min-height: 50px;
-    width: 42px;
+    width: 46px;
     overflow: hidden;
     margin-inline: auto;
     display: flex;
@@ -107,7 +107,7 @@ ion-icon{
     font-size: var(--fontbig);
 }
 .active{
-    width: 215px ;
+    width: 250px ;
     transition: width 0.3s ease-out;
 }
 .nav-right{
@@ -142,7 +142,7 @@ ion-icon{
     font-weight: 500;
 }
 .intro-div p{
-    padding-bottom:15px ;
+    padding-bottom:20px ;
 }
 .intro-div a, .project-div a{
     position: relative;
@@ -213,17 +213,8 @@ ion-icon{
     transition: 0.3s ease-in;
 }
 .project-img .project-big-img:hover{
-    box-shadow: 2px 3px 12px 2px #575656;
+    box-shadow: 3px 3px 15px 2px #575656;
     transition: 0.3s ease-in;
-}
-.project-img .project-small-img{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 17%;
-    object-fit: cover;
-    height: 50%;
-    box-shadow: 1px 2px 3px #333;
 }
 .project-child{
     display: flex;
