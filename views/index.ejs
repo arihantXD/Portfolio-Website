@@ -31,7 +31,7 @@
     <section class="logo-section">
         <div class="logo-section-right">
             <span class="logo">HEY, I'M ARIHANT KAMDE</span>
-            <p>I am a Full Stack Web Developer. I love working on exciting projects and building awesome web designs.
+            <p>A Full Stack Web Developer, I working and building exciting projects.
             </p>
             <a href="/projects">MY PROJECTS</a>
         </div>
@@ -52,17 +52,15 @@
 
     </section>
     <section class="about">
-        <span class="about-header">About Me</span>
+        <span class="about-header">Let's Get Started</span>
         <div class="about-child">
-            <span>Introduction</span>
+            <span>About Me</span>
             <div class="intro-div">
-                <p>I'm a Frontend Web Developer building the Front-end of Websites and Web Applications that leads to
-                    the success of the overall product. Check out some of my work in the Projects section.
-                    I also like sharing content related to the stuff that I have learned over the years in Web
-                    Development so it can help other people of the Dev Community. Feel free to Connect or Follow me on
-                    my Linkedin where I post useful content related to Web Development and Programming
-                    I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity
-                    that matches my skills and experience then don't hesitate to contact me.</p>
+                <p>Hey! I am a Full Stack Web Developer. I love working on exciting projects and building cool web
+                    designs. I am an engineer who thrives to learn different technologies and the amazing logic behind
+                    them, I love sharing my ideas and contributing to real world problems. I am following a journey
+                    where I am learning and enhancing my skill set everyday to increase my potential as a Techie/Tech
+                    Geek.</p>
                 <a href="#">Contact Me</a>
             </div>
         </div>
@@ -80,6 +78,15 @@
                 <div class="education-detail-child">
                     <span>B Tech, 9.1 CGPA</span>
                     <p>Lakshmi Narain College Of Technology and Excellence, Bhopal</p>
+                </div>
+            </div>
+        </div>
+        <div class="about-child">
+            <span>Work Experience</span>
+            <div class="experience-div">
+                <div class="experience-detail-child">
+                    <span>Persistent System Limited</span>
+                    <p>Software Engineer, 08/2023 - Present</p>
                 </div>
             </div>
         </div>
@@ -128,9 +135,10 @@
                 </div>
                 <div class="project-description">
                     <span>GenZ (Clothing Store)</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est enim, dolorem nam alias,
-                        asperiores
-                        quibusdam, corrupti fuga fugiat esse hic error eos maxime dolorum quisquam.</p>
+                    <p>Explore GenZ's dynamic online platform, offering a seamless experience for discovering and
+                        purchasing cutting-edge products. From innovative gadgets to stylish accessories, GenZ brings
+                        the future to your fingertips. Join us today and elevate your shopping journey with GenZ.
+                        Personal Cart can be used by Cookies and User Management done by using Sessions.</p>
                     <div class="project-links">
                         <a href="https://github.com/arihantXD/GenZ">Git Hub</a>
                         <a href="https://gen-z-five.vercel.app/">Live Demo</a>
@@ -146,9 +154,12 @@
                 </div>
                 <div class="project-description">
                     <span>CaffeZilla</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est enim, dolorem nam alias,
-                        asperiores
-                        quibusdam, corrupti fuga fugiat esse hic error eos maxime dolorum quisquam.</p>
+                    <p>Created a dynamic Full Stack Website for café exploration, empowering users to discover cafes,
+                        post reviews, and upload photos. Implemented user registration, login, café management, and
+                        review functionalities. Contribution can be done to an engaging user experience through
+                        intuitive café discovery and review interaction.
+                        Cafes are located on the map using MapBox Api and pictures are hosted via Cloudinary Management.
+                    </p>
                     <div class="project-links">
                         <a href="https://github.com/arihantXD/CaffeZilla">Git Hub</a>
                         <a href="https://caffe-zilla.vercel.app/">Live Demo</a>
@@ -164,9 +175,10 @@
                 </div>
                 <div class="project-description">
                     <span>Weather.io</span>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est enim, dolorem nam alias,
-                        asperiores
-                        quibusdam, corrupti fuga fugiat esse hic error eos maxime dolorum quisquam.</p>
+                    <p>Developed Weather.io, a feature-rich website displaying comprehensive weather insights, including
+                        real-time temperature, humidity, pressure, sunrise, sunset, and pollutant concentration data.
+                        Implemented cookies to enhance user experience by storing preferences such as recent search
+                        history for the last three locations.</p>
                     <div class="project-links">
                         <a href="https://github.com/arihantXD/Weather.io">Git Hub</a>
                         <a href="https://weather-io-kappa.vercel.app/">Live Demo</a>
@@ -175,6 +187,22 @@
             </div>
         </div>
     </section>
+
+    <section class="contact">
+        <span class="contact-header">Contact Me</span>
+        <div class="contact-div">
+            <div class="project-child">
+                <div class="form-div">
+                        <input required id="name" type="text" placeholder="Enter your name">
+                        <input required id="email" type="text" placeholder="Enter your email">
+                        <textarea required id="msg" cols="30" rows="5" type="text" placeholder="Enter your message"></textarea>
+                        <button type="submit">Send</button>
+                    <span id="message-response" style="display: none; font-weight: 600;"></b></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- <footer>&copy; Arihant Kamde</footer> -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"
@@ -184,6 +212,36 @@
         integrity="sha512-Ic9xkERjyZ1xgJ5svx3y0u3xrvfT/uPkV99LBwe68xjy/mGtO+4eURHZBW2xW4SZbFrF1Tf090XqB+EVgXnVjw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="/script/script.js"></script>
+    <script>
+        const btn = document.querySelector("button");
+        const msgres = document.querySelector("#message-response");
+        const msg = document.querySelector("#msg");
+        const name = document.querySelector("#name")
+        const email = document.querySelector("#email");
+        btn.addEventListener("click", ()=>{
+            const data = {name : name.value, msg : msg.value, email : email.value};
+            if(name!=='' && msg!=='' && email!==''){
+                fetch("http://localhost:3000/contact", {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        msgres.innerText = "Message recieved, I'll get back to you soon!";
+                        msgres.style.display =  "block";
+                    })
+                    .catch(error => {
+                        console.error('Fetch error:', error);
+                    });
+            }else{
+                msgres.innerText = "Please fill the form!";
+                msgres.style.display =  "block";
+            }
+        })
+    </script>
 </body>
 
 </html>

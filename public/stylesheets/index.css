@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 :root{
-    --fontprimary : 14px;
+    --fontprimary : 15px;
     --fontlogo : clamp(1.7rem, 6vw, 2.4rem);
     --fontbig : clamp(1.2rem, 4vw, 1.7rem);
 }
@@ -128,7 +128,7 @@ ion-icon{
     width: min(100%, 1250px);
     margin-inline: auto;
 }
-.about-header, .project-header{
+.about-header, .project-header, .contact-header{
     font-size: var(--fontlogo);
     font-weight: 500;
 }
@@ -163,17 +163,17 @@ ion-icon{
 .education-div>div{
     margin-top: 10px;
 }
-.education-detail-child > span{
+.education-detail-child > span, .experience-detail-child>span{
     font-weight: 600;
 }
-.education-detail-child{
+.education-detail-child, .experience-detail-child{
     border-left: 10px solid #333;
     padding: 5px 15px;
 }
 .skill-div{
     margin-top: 10px;
 }
-.skill-child > span{
+.skill-child > span, .experience-div > span{
     font-size: var(--fontbig);
     border-left: 10px solid #333;
     padding-block: 5px;
@@ -197,10 +197,6 @@ ion-icon{
     position: relative;
     width: clamp( 310px, 95%, 700px);
     height: clamp(310px, 95% ,600px);
-    /* border-left: 10px solid #333;
-    padding-block: 5px;
-    padding-left: 15px; */
-    
 }
 .project-img img{
     max-width: 100%;
@@ -241,7 +237,7 @@ ion-icon{
     text-align: start;
 }
 .project{
-    margin-top: 70px;
+    margin-top: 50px;
 }
 @media screen and (min-width : 900px){
     .project-child{
@@ -256,8 +252,32 @@ ion-icon{
         min-height: 300px;
     }
 }
+.contact{
+    margin-top: 60px;
+    text-align: center;
+}
+.form-div{
+    display: block;
+    margin-inline: auto;
+}
+
+.contact input, .contact  button, .contact textarea {
+    margin-block: 10px;
+    width: min(93%, 900px);
+    padding: 10px;
+    outline: none;
+    font-weight: 500;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+.contact  button {
+    color: #333;
+    background-color: white;
+    font-weight: 600;
+}
 
 
-.intro-div, .education-div, .skill-child, .project-div{
+.intro-div, .education-div, .skill-child, .project-div, .experience-div, .contact-div{
     padding-inline: 10px;
 }
