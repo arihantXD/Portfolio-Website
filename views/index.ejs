@@ -221,7 +221,7 @@
         btn.addEventListener("click", ()=>{
             const data = {name : name.value, msg : msg.value, email : email.value};
             if(name!=='' && msg!=='' && email!==''){
-                fetch("http://localhost:3000/contact ", {
+                fetch("https://portfolio-v01-ruby.vercel.app/contact", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
