@@ -18,8 +18,7 @@ app.get("/", (req, res) => {
 })
 
 app.post("/contact", async (req, res)=>{
-    
-    sendEmail(req.body.name, req.body.email, req.body.msg);
+    await sendEmail(req.body.name, req.body.email, req.body.msg);
     res.json("sent");
 })
 
@@ -29,7 +28,7 @@ app.listen(3000, () => {
 
 const mailjet = require('node-mailjet')
     .apiConnect( process.env.PUBLIC_API, process.env.PRIVATE_API)
-function sendEmail(name, email, msg) {
+function sendEmail(name, email, msg)  {
     return mailjet
         .post("send", { version: "v3.1" })
         .request({
