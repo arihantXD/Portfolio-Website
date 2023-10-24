@@ -221,7 +221,7 @@
         const email = document.querySelector("#email");
         btn.addEventListener("click", () => {
             const data = { name: name.value, msg: msg.value, email: email.value };
-            fetch("http://localhost:3000/contact", {
+            fetch("https://portfolio-website-olive-rho.vercel.app/contact", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
