@@ -221,7 +221,7 @@
         const email = document.querySelector("#email");
         btn.addEventListener("click", () => {
             const data = { name: name.value, msg: msg.value, email: email.value };
-            fetch("http://localhost:3000/contact", {
+            fetch("https://portfolio-website-olive-rho.vercel.app/contact", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -232,6 +232,7 @@
                 .then(data => {
                     msgres.innerText = "Message recieved, I'll get back to you soon!";
                     msgres.style.display = "block";
+                    console.log(data);
                 })
                 .catch(error => {
                     console.error('Fetch error:', error);
