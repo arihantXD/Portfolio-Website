@@ -31,7 +31,7 @@
     <section class="logo-section">
         <div class="logo-section-right">
             <span class="logo">HEY, I'M ARIHANT KAMDE</span>
-            <p>A Full Stack Web Developer, I working and building exciting projects.
+            <p>A Full Stack Web Developer, working and building exciting projects.
             </p>
             <a href="/projects">MY PROJECTS</a>
         </div>
@@ -40,10 +40,10 @@
                 <ion-icon class="show add" name="add"></ion-icon>
             </div>
             <div class="logo-section-item">
-                <ion-icon name="logo-linkedin"></ion-icon>
-                <ion-icon name="logo-github"></ion-icon>
-                <ion-icon name="logo-instagram"></ion-icon>
-                <ion-icon name="logo-facebook"></ion-icon>
+                <a href="https://github.com/arihantXD"><ion-icon name="logo-github"></ion-icon></a>
+                <a href="https://www.instagram.com/arihant0.1/?next=%2F"><ion-icon name="logo-instagram"></ion-icon></a>
+                <a href="https://www.linkedin.com/in/arihant-kamde-2976451b5/"><ion-icon name="logo-linkedin"></ion-icon></a>
+                <a href="https://www.facebook.com/01arihant"><ion-icon name="logo-facebook"></ion-icon></a>
             </div>
         </div>
         <div class="slider">
@@ -131,7 +131,7 @@
             <div class="project-child">
                 <div class="project-img">
                     <img class="project-big-img" src="/img/genzPC.png" alt="">
-                    <!-- <img class="project-small-img" src="/img/genz.jpg" alt=""> -->
+                    
                 </div>
                 <div class="project-description">
                     <span>GenZ (Clothing Store)</span>
@@ -150,7 +150,7 @@
             <div class="project-child">
                 <div class="project-img">
                     <img class="project-big-img" src="/img/caffePC.png" alt="">
-                    <!-- <img class="project-small-img" src="/img/caffe.jpg" alt=""> -->
+                    
                 </div>
                 <div class="project-description">
                     <span>CaffeZilla</span>
@@ -171,7 +171,7 @@
             <div class="project-child">
                 <div class="project-img">
                     <img class="project-big-img" src="/img/weatherPC.png" alt="">
-                    <!-- <img class="project-small-img" src="/img/weather.jpg" alt=""> -->
+                    
                 </div>
                 <div class="project-description">
                     <span>Weather.io</span>
@@ -191,12 +191,13 @@
     <section class="contact">
         <span class="contact-header">Contact Me</span>
         <div class="contact-div">
-            <div class="project-child">
+            <div class="contact-child">
                 <div class="form-div">
-                        <input required id="name" type="text" placeholder="Enter your name">
-                        <input required id="email" type="text" placeholder="Enter your email">
-                        <textarea required id="msg" cols="30" rows="5" type="text" placeholder="Enter your message"></textarea>
-                        <button type="submit">Send</button>
+                    <input required id="name" type="text" placeholder="Enter your name">
+                    <input required id="email" type="text" placeholder="Enter your email">
+                    <textarea required id="msg" cols="30" rows="5" type="text"
+                        placeholder="Enter your message"></textarea>
+                    <button type="submit">Send</button>
                     <span id="message-response" style="display: none; font-weight: 600;"></b></span>
                 </div>
             </div>
@@ -218,28 +219,25 @@
         const msg = document.querySelector("#msg");
         const name = document.querySelector("#name")
         const email = document.querySelector("#email");
-        btn.addEventListener("click", ()=>{
-            const data = {name : name.value, msg : msg.value, email : email.value};
-            if(name!=='' && msg!=='' && email!==''){
-                fetch("https://portfolio-v01-ruby.vercel.app/contact", {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data)
+        btn.addEventListener("click", () => {
+            const data = { name: name.value, msg: msg.value, email: email.value };
+            fetch("http://localhost:3000/contact", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data)
+            })
+                .then(response => response.json())
+                .then(data => {
+                    msgres.innerText = "Message recieved, I'll get back to you soon!";
+                    msgres.style.display = "block";
                 })
-                    .then(response => response.json())
-                    .then(data => {
-                        msgres.innerText = "Message recieved, I'll get back to you soon!";
-                        msgres.style.display =  "block";
-                    })
-                    .catch(error => {
-                        console.error('Fetch error:', error);
-                    });
-            }else{
-                msgres.innerText = "Please fill the form!";
-                msgres.style.display =  "block";
-            }
+                .catch(error => {
+                    console.error('Fetch error:', error);
+                });
+            msgres.innerText = "Please fill the form!";
+            msgres.style.display = "block";
         })
     </script>
 </body>

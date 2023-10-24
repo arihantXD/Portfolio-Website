@@ -10,7 +10,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname, '/public')));
-
+require('dotenv').config();
 
 
 app.get("/", (req, res) => {
@@ -18,9 +18,8 @@ app.get("/", (req, res) => {
 })
 
 app.post("/contact", async (req, res)=>{
-    if(req.body.name!=="" && req.body.email!=="" && req.body.msg!==""){
-        sendEmail(req.body.name, req.body.email, req.body.msg);
-    }
+    
+    sendEmail(req.body.name, req.body.email, req.body.msg);
     res.json("sent");
 })
 
@@ -29,7 +28,7 @@ app.listen(3000, () => {
 })
 
 const mailjet = require('node-mailjet')
-    .apiConnect('4448b7d0594653020747d744a3d250ae', 'a5fca7b55d20736320def584059c1b1b')
+    .apiConnect( process.env.PUBLIC_API, process.env.PRIVATE_API)
 function sendEmail(name, email, msg) {
     return mailjet
         .post("send", { version: "v3.1" })
@@ -45,8 +44,8 @@ function sendEmail(name, email, msg) {
                             Email: "xtremeplay000@gmail.com",
                         },
                     ],
-                    Subject: `Message Recieved From ${name} - Portfolio Website`,
-                    TextPart: `${msg} -${name}`,
+                    Subject: `${name} via Portfolio Website`,
+                    TextPart: `${msg}`,
                     HTMLPart: "",
                 },
             ],

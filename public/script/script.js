@@ -47,14 +47,14 @@ tl
     repeat : -1,
     duration : 0.8
 })
-// .from(".about > .about-child" ,{
-//     scrollTrigger : {
-//         trigger : ".intro-div",
-//         scroller : "body",
-//         markers : true,
-//         start : "top 70%",
-//     },
-//     x: -30,
-//     opacity: 0,
-//     duration : 1
-// })
+.from(".project" ,{
+    y: 30,
+    opacity: 0,
+    duration : 0.8
+})
+.from(".contact" ,{
+    y: 30,
+    opacity: 0,
+    duration : 0.8
+})
+

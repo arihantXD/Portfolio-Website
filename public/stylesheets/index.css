@@ -80,7 +80,10 @@ ion-icon{
 .logo-section-right .logo{
     position: relative;
     font-size: var(--fontlogo);
-    font-weight: 700;
+    font-weight: 400;
+}
+ion-icon{
+    color: #333;
 }
 .logo-section-right p{
     position: relative;
@@ -93,8 +96,7 @@ ion-icon{
     background-color: black;
     padding: 15px 20px;
     color: white;
-    font-weight: 700;
-    border-radius: 5px;
+    font-weight: 600;
 }
 .slider{
     min-height: 70px;
@@ -123,6 +125,7 @@ ion-icon{
     }
 }
 .about, .project{
+    position: relative;
     margin-top: 20px;
     text-align: center;
     width: min(100%, 1250px);
@@ -163,7 +166,7 @@ ion-icon{
 .education-div>div{
     margin-top: 10px;
 }
-.education-detail-child > span, .experience-detail-child>span{
+.education-detail-child > span{
     font-weight: 600;
 }
 .education-detail-child, .experience-detail-child{
@@ -178,6 +181,9 @@ ion-icon{
     border-left: 10px solid #333;
     padding-block: 5px;
     padding-left: 15px;;
+}
+.experience-detail-child>span{
+    font-size: var(--fontbig);
 }
 .skill-child ul{
     list-style: none;
@@ -237,7 +243,7 @@ ion-icon{
     text-align: start;
 }
 .project{
-    margin-top: 50px;
+    margin-top: 30px;
 }
 @media screen and (min-width : 900px){
     .project-child{
@@ -253,8 +259,13 @@ ion-icon{
     }
 }
 .contact{
-    margin-top: 60px;
+    position: relative;
+    width: 90%;
+    margin-inline: auto;
+    margin-block: 60px;
     text-align: center;
+    padding: 20px;
+    box-shadow: 3px 2px 5px 5px #ddd;
 }
 .form-div{
     display: block;
@@ -268,7 +279,6 @@ ion-icon{
     outline: none;
     font-weight: 500;
     border: 2px solid #333;
-    border-radius: 5px;
 }
 
 .contact  button {
